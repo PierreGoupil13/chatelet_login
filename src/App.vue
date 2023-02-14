@@ -1,10 +1,15 @@
 <template>
-  <!-- <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav> -->
-  <router-view />
-
+  <router-view>
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <router-link to="/" class="navbar-brand">
+          <img src="./assets/logo.png" alt="Logo" width="24" height="24" class="d-inline-block align-text-top me-2">
+          Clinique LE CHATELET
+        </router-link>
+        <router-link to="/recommandations" class="d-flex btn btn-secondary">Recommandations de la CNIL</router-link>
+      </div>
+    </nav>
+  </router-view>
 </template>
 
 <style>
@@ -13,7 +18,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: black;
 }
 
 nav {
@@ -23,9 +28,5 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
 }
 </style>

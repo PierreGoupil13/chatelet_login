@@ -1,5 +1,4 @@
 <template>
-  <router-view>
     <nav class="navbar bg-light">
       <div class="container-fluid">
         <router-link to="/" class="navbar-brand">
@@ -9,7 +8,7 @@
         <router-link to="/recommandations" class="d-flex btn btn-secondary">Recommandations de la CNIL</router-link>
       </div>
     </nav>
-  </router-view>
+  <router-view />
 </template>
 
 <style>

@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  db:
+    image: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=ad
+  web:
+    build:
+      context: .
+      target: web
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    command: npm run serve
